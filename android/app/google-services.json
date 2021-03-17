@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "92472497479",
+    "project_id": "fmm-app-ad5af",
+    "storage_bucket": "fmm-app-ad5af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92472497479:android:2fe24bed07000efa9fa862",
+        "android_client_info": {
+          "package_name": "com.code4ij.fortuna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92472497479-n7kbqbog3p30m91842s9jk94sdk4m2rv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.code4ij.fortuna",
+            "certificate_hash": "38e8020b314e8c05bcdaace29383bf439ef62651"
+          }
+        },
+        {
+          "client_id": "92472497479-j03vp3q5cb7qf1fgce2duaijbmvfrcd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM0GiKDYOPwCHHv6qKQ7z_IQNPv7A3iEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92472497479-j03vp3q5cb7qf1fgce2duaijbmvfrcd7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
