@@ -169,7 +169,7 @@ class _ModuleScreen1State extends State<ModuleScreen1> with WidgetsBindingObserv
                           ),
                         ),
                       ),
-                      Image.asset("asset/image/girl.gif",width: size.width/3,height: size.height/4.3,fit: BoxFit.fill,),
+                      Image.asset("asset/image/girl.gif",width: size.width/3,height: size.height/5.5,fit: BoxFit.fill,),
                     ],
                   ),
                 ),

@@ -12,9 +12,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   final String introduction =
-      "¡Hola!\n\nBienvenidos a Fortuna, la aplicación creada por la Fundación Mundo Mujer que le ayudará a aprender de una manera divertida cómo manejar y administrar su dinero.";
+      "Bienvenidos a Fortuna, la aplicación creada por la Fundación Mundo Mujer que le ayudará a aprender de una manera divertida cómo manejar y administrar su dinero.";
   final assetsAudioPlayer = AssetsAudioPlayer();
-  final backAudioPlayer = AssetsAudioPlayer();
 
   @override
   void initState() {
@@ -22,10 +21,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     assetsAudioPlayer.open(
       Audio("asset/audio/Portada.m4a"), volume: 0.7
     );
-    backAudioPlayer.open(Audio("asset/audio/home_background.mp3"), volume: 0.2);
-    Future.delayed(const Duration(milliseconds: 200), () {
+    Future.delayed(const Duration(milliseconds: 50), () {
       assetsAudioPlayer.play();
-      backAudioPlayer.play();
     });
     super.initState();
   }
@@ -34,10 +31,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.inactive) {
       assetsAudioPlayer.pause();
-      backAudioPlayer.pause();
     } else if (state == AppLifecycleState.resumed) {
       assetsAudioPlayer.play();
-      backAudioPlayer.play();
     }
   }
 
@@ -45,7 +40,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void dispose() {
     // print('Observer removed');
     assetsAudioPlayer.stop();
-    backAudioPlayer.stop();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
@@ -109,6 +103,26 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                 )),
             Align(
               alignment:
+              Alignment.lerp(Alignment.topLeft, Alignment.topCenter, 0.25),
+              child: Padding(
+                padding: EdgeInsets.only(top: size.height * 0.2),
+                child: Container(
+                  width: size.width / 2.5,
+                  child: AutoSizeText(
+                    "¡Hola!",
+                    textAlign: TextAlign.start,
+                    minFontSize: (size.height * 0.02).round().toDouble(),
+                    style: TextStyle(
+                      color: Colors.white,
+                      wordSpacing: 2,
+                      fontSize: size.height * 0.033,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment:
                   Alignment.lerp(Alignment.centerLeft, Alignment.center, 0.3),
               child: Padding(
                 padding: EdgeInsets.only(top: size.height * 0.2656),
@@ -120,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     minFontSize: (size.height * 0.02).round().toDouble(),
                     style: TextStyle(
                       wordSpacing: 2,
-                       fontSize: size.height * 0.025
+                       fontSize: size.height * 0.0225
                     ),
                   ),
                 ),

@@ -153,7 +153,7 @@ class ModuleController extends StatelessWidget {
           color: data[index]["color"],
           image: 'asset/image/module10_background.png',
           discription: data[index]["discription"],
-          title: "TENTACION",
+          title: "TENTACIONES",
           name: data[index]["name"],
           icon: "asset/image/cherry.png",
           gamemode: Builder(

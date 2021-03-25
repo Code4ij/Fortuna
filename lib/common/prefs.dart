@@ -67,7 +67,7 @@ class Prefs {
 
   List<Map> get defaultUserDataMap => defaultMap;
 
-  int get defaultActiveIndex => 10;
+  int get defaultActiveIndex => 0;
 
   String get defaultThemeColor => 'blue';
 

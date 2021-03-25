@@ -10,9 +10,11 @@ import 'package:fortuna/models/user_model.dart';
 import 'package:fortuna/screen/form_glow_button.dart';
 import 'package:fortuna/screen/login_screen.dart';
 import 'package:fortuna/screen/module_screen.dart';
+import 'package:fortuna/screen/pdf_viewer.dart';
 import 'package:fortuna/services/user_service.dart';
 import 'package:fortuna/templates/clip_rect.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:native_pdf_view/native_pdf_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GoogleScreen extends StatefulWidget {
@@ -27,6 +29,7 @@ class GoogleScreen extends StatefulWidget {
 class _GoogleScreenState extends State<GoogleScreen> {
   final _formKey = GlobalKey<FormState>();
   final picker = ImagePicker();
+
   String error = '';
   bool loading = false;
 
@@ -41,6 +44,7 @@ class _GoogleScreenState extends State<GoogleScreen> {
 
   @override
   void initState() {
+    super.initState();
     this.fullName = widget.user.displayName;
   }
 
@@ -327,13 +331,12 @@ class _GoogleScreenState extends State<GoogleScreen> {
                                         color: Colors.black,
                                         fontSize: size.height * 0.019)),
                                 GestureDetector(
-                                  onTap: () async {
-                                    String url = privacyPolicyUrl;
-                                    if(await canLaunch(url)) {
-                                      await launch(url);
-                                    } else {
-                                      UserService().flutterToast("Sin internet");
-                                    }
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      child: CustomPdfViewer(size: size,),
+                                      barrierDismissible: false
+                                    );
                                   },
                                   child: AutoSizeText("política de privacidad",
                                       style: TextStyle(
@@ -426,25 +429,6 @@ class _GoogleScreenState extends State<GoogleScreen> {
                             SizedBox(
                               height: size.height * 0.02,
                             ),
-
-                            // Cancel Button
-//                            Padding(
-//                              padding: EdgeInsets.only(
-//                                  bottom: MediaQuery.of(context).viewInsets.bottom),
-//                              child: GestureDetector(
-//                                child: FormGlowButton(buttonText: "Regresa",),
-//                                onTap: () async {
-//                                  //TODO: Go Back
-//                                  print("Go Back");
-//                                  await UserService().signOutGoogleRegister();
-//                                  Navigator.of(context).pushReplacement(
-//                                      MaterialPageRoute(
-//                                          builder: (context) => LoginScreen()));
-//                                },
-//                              ),
-//                            ),
-
-
                           ],
                         ),
                       ),

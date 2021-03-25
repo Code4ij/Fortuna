@@ -11,6 +11,7 @@ import 'package:fortuna/common/prefs.dart';
 import 'package:fortuna/models/user_model.dart';
 import 'package:fortuna/screen/form_glow_button.dart';
 import 'package:fortuna/screen/login_screen.dart';
+import 'package:fortuna/screen/pdf_viewer.dart';
 import 'package:fortuna/services/user_service.dart';
 import 'package:fortuna/templates/clip_rect.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -558,13 +559,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         color: Colors.black,
                                         fontSize: size.height * 0.017)),
                                 GestureDetector(
-                                  onTap: () async {
-                                    String url = privacyPolicyUrl;
-                                    if(await canLaunch(url)) {
-                                      await launch(url);
-                                    } else {
-                                      UserService().flutterToast("Sin internet");
-                                    }
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      child: CustomPdfViewer(size: size,),
+                                      barrierDismissible: false,
+                                    );
                                   },
                                   child: AutoSizeText("política de privacidad",
                                       style: TextStyle(

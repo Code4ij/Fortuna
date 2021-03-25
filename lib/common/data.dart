@@ -53,7 +53,7 @@ Map<int, dynamic> data = {
   6: {
     "name": "Mi Cajero Automático",
     "initialData": "En este simulador de cajeros, conocerá el uso cotidiano de un cajero automático. Podrá seleccionar una de las 3 casillas, las cuales le llevarán a un juego donde aprenderá las distintas partes de un cajero: cómo retirar dinero, cómo consultar el saldo disponible en la cuenta y otras actividades realizables.",
-    "discription": "Los cajeros automáticos son máquinas dispensadoras de dinero, activadas por medio de una tarjeta y una clave secreta personal ingresada por el usuario.",
+    "discription": "En la simulación de Cajero Automático aprenderá sus principales opciones. Podrá cambiar su contraseña, retirar dinero y consultar su saldo disponible.",
     "explaination": "En este simulador podrá consultar su saldo, cambiar de contraseña y retirar dinero. De esta manera aprenderá lo esencial de un cajero automático",
     "color": Color(0xffF8CD35)
   },
@@ -67,14 +67,14 @@ Map<int, dynamic> data = {
   8: {
     "name": "Decisiones Arriesgadas",
     "initialData": "Aprenda a darse cuenta entre decisiones financieras arriesgadas y decisiones o inversiones de poco riesgo. Responderá una serie de preguntas y conseguirá dominarlas en su totalidad. ",
-    "discription": "Las decisiones de riesgo se basan en la percepción y tolerancia al riesgo de cada individuo y son tan personales como la misma forma de vestir. En el caso de la \"Aceptación del Riesgo\", en cuanto se aumenta el nivel de riesgo, se disminuye el nivel de rendimiento esperado.",
+    "discription": "En Decisiones Arriesgadas, tendrá la opción de realizar una corta encuesta. En esta, podrá descubrir cuáles son sus habilidades para administrar sus finanzas.",
     "explaination": "Tome una encuesta de riesgo y conozca qué tan buenas son sus finanzas. Recuerde: un buen balance entre prudencia y decisión puede ser la fórmula del éxito.",
     "color": Color(0xff0072B2)
   },
   9: {
     "name": "Tentaciones",
     "initialData": "En este juego de destreza, deberá deslizar la canasta de derecha a izquierda intentando atrapar lo que más pueda. Deberá tener en cuenta qué cosas son o no necesarias dependiendo de la ocasión. No te dejes llevar por la tentación y elige sabiamente.",
-    "discription": "La tentanción es el deseo de realizar una acción momentáneamente agradable pero que muy probablemente sea dañina a largo plazo. Esto se puede dar por varias razones, ya sea legal, social, psicológica, etc.",
+    "discription": "En el juego \"Tentaciones\", podrá entretenerse mientras aprende lo caro que puede costar al principio darse un lujo. Ten en cuenta que primero debes cubrir las necesidades antes de optar por cosas secundarias.",
     "explaination": "En este juego podrá aprender lo importante que es priorizar necesidades antes que lujos. Tiene que recolectar en total 20 objetos necesarios y de esa forma ganará el juego.",
     "color": Color(0xffFFF200)
   },

@@ -59,6 +59,7 @@ dependencies:
   url_launcher: ^5.7.10
   flutter_masked_text: ^0.8.0
   flutter_glow: ^0.1.2
+  native_pdf_view:
   flutter_money_formatter:
     git:
       url: git://github.com/anisalibegic/flutter_money_formatter.git
@@ -81,6 +82,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - asset/
     - asset/image/
     - asset/Module1/
     - asset/Module3/
