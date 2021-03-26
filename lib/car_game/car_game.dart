@@ -499,13 +499,13 @@ class _CarGameState extends State<CarGame> with TickerProviderStateMixin {
       }
       else if(_computer.money >= 500) {
         score = 10;
-        Prefs().activeIndex = 2;
         GameTemplate.of(context).trophyIndex = 1;
       }
       else {
         score = 5;
         GameTemplate.of(context).trophyIndex = 2;
       }
+      Prefs().activeIndex = 2;
       if(data['total'] < score){
         data['total'] = score;
         prefs.updateScore(CarGame.index, data);
